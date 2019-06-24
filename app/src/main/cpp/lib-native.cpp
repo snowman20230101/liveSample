@@ -9,12 +9,12 @@ extern "C" {
 #include <libavutil/avutil.h>
 }
 
-extern "C" JNIEXPORT jint JNICALL
-Java_com_wwb_live_TestNdkHandler_getVersion(JNIEnv *env, jclass type) {
+extern "C" JNIEXPORT jint JNICALL Java_com_wwb_live_TestNdkHandler_getVersion(JNIEnv *env, jclass type) {
     jint version = avcodec_version();
-
+    //调用rtmp api
     RTMP_Alloc();
 
+    //调用x264 api
     x264_picture_t *p = new x264_picture_t;
 
     LOGE("版本是：%d", version);
