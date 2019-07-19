@@ -11,4 +11,7 @@
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__)
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__)
 
+//宏函数
+#define DELETE(obj) if(obj){ delete obj; obj = 0; }
+
 #endif //LIVESAMPLE_MACRO_H

@@ -19,8 +19,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__STDC_CONSTANT_MACROS -L${CMAKE_SOURC
 
 #连接动态库
 target_link_libraries( ffmpeg
-        # 引入ffmpeg静态库
         avformat avcodec avfilter avutil swresample swscale
         rtmp
         x264
-        log z)
+        faac
+        mp3lame
+        log)
